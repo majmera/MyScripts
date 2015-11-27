@@ -81,10 +81,10 @@ class Output:
         return
         
 def main():
-    parser = argparse.ArgumentParser(description='Joins pdf files and generates an output for odd and even pages')
+    parser = argparse.ArgumentParser(description='Joins pdf files and generates an output for odd and even pages to print back to back pages on a printer that does not support duplex printing')
     parser.add_argument('pdfInput', help='One or more pdf input files', nargs='+')
     parser.add_argument('-d', help='Print debug output from the script run',action = 'store_true') 
-    parser.add_argument('-p', type=int, help='Print debug output from the script run', default = 2) 
+    parser.add_argument('-p', type=int, help='Number of pages to be printed per sheet. This changes what file (odd or even) a page will appear in', default = 2) 
     
     args = parser.parse_args()
 
