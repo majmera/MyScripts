@@ -3,17 +3,6 @@ from PyPDF2 import PdfFileWriter
 import argparse
 import sys
 
-class Sheet:
-    """Class defined to represent a sheet of PDF file"""
-    def __init__(self, PagesPerSheet, Debug):
-        self.pagesPerSheet = PagesPerSheet
-        self.debug = Debug
-        self.pages = []
-        self.pagesAddedToSheet = 0
-        return
-
-    
-
 class Output:
     """Class defined to generate 2 printer friendly pdf files"""
     
